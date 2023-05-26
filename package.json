@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://konradhojda.github.io/pro-shelter",
+  "homepage": "https://konradhojda.github.io/nauczesie",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
