@@ -1,13 +1,11 @@
-import Slider from "../components/Slider";
-import { GetServerSideProps } from "next";
 import Image from "next/image";
-import { IconBox } from "../components/IconBox/IconBox";
+import Slider from "../components/Slider";
 
 interface Config {
   template: "LIGHT" | "DARK";
 }
 
-export default function Home({template}: Config) {
+export default function Home({ template }: Config) {
   return (
     <div className="flex flex-col gap-6">
       <Slider />
@@ -15,17 +13,23 @@ export default function Home({template}: Config) {
       <div className="container mx-auto">
         <div className="flex justify-center items-center">
           <div className="w-1/2">
-            <img src="https://placekitten.com/g/1200/800" alt="https://placekitten.com/g/1200/800" />
+            <Image
+              src="https://placekitten.com/g/1200/800"
+              alt="https://placekitten.com/g/1200/800"
+            />
           </div>
           <div className="flex flex-col w-1/2 items-center justify-center gap-5">
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </h2>
-            <p className="text-justify max-w-[80%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iste quibusdam unde. Aliquam blanditiis
-              dignissimos doloribus eius et illo, ipsum libero mollitia numquam quibusdam quos similique suscipit
-              voluptatibus. Itaque, magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-              dignissimos dolores laudantium nemo similique? Dicta, dolorum ducimus harum id impedit nesciunt odio
-              praesentium, qui reprehenderit repudiandae sint tempora vero voluptates.</p>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+            <p className="text-justify max-w-[80%]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+              iste quibusdam unde. Aliquam blanditiis dignissimos doloribus eius
+              et illo, ipsum libero mollitia numquam quibusdam quos similique
+              suscipit voluptatibus. Itaque, magnam. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Delectus dignissimos dolores
+              laudantium nemo similique? Dicta, dolorum ducimus harum id impedit
+              nesciunt odio praesentium, qui reprehenderit repudiandae sint
+              tempora vero voluptates.
+            </p>
           </div>
         </div>
       </div>
@@ -33,24 +37,29 @@ export default function Home({template}: Config) {
       <div className="container mx-auto">
         <div className="flex justify-center items-center">
           <div className="flex flex-col w-1/2 items-center justify-center gap-5">
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </h2>
-            <p className="text-justify max-w-[80%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iste quibusdam unde. Aliquam blanditiis
-              dignissimos doloribus eius et illo, ipsum libero mollitia numquam quibusdam quos similique suscipit
-              voluptatibus. Itaque, magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-              dignissimos dolores laudantium nemo similique? Dicta, dolorum ducimus harum id impedit nesciunt odio
-              praesentium, qui reprehenderit repudiandae sint tempora vero voluptates.</p>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+            <p className="text-justify max-w-[80%]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+              iste quibusdam unde. Aliquam blanditiis dignissimos doloribus eius
+              et illo, ipsum libero mollitia numquam quibusdam quos similique
+              suscipit voluptatibus. Itaque, magnam. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Delectus dignissimos dolores
+              laudantium nemo similique? Dicta, dolorum ducimus harum id impedit
+              nesciunt odio praesentium, qui reprehenderit repudiandae sint
+              tempora vero voluptates.
+            </p>
           </div>
           <div className="w-1/2">
-            <img src="https://placekitten.com/g/1200/800" alt="https://placekitten.com/g/1200/800" />
+            <Image
+              src="https://placekitten.com/g/1200/800"
+              alt="https://placekitten.com/g/1200/800"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 
 export async function getServerSideProps(config: Config) {
   // Fetch data from external API
@@ -60,11 +69,11 @@ export async function getServerSideProps(config: Config) {
   // Pass data to the page via props
   return {
     props: {
-      myData
-    }
+      myData,
+    },
   };
 }
 
 const myData = {
-  template: "LIGHT"
+  template: "LIGHT",
 };
