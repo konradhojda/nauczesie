@@ -61,7 +61,7 @@ export default function Home({ template }: Config) {
   );
 }
 
-export async function getServerSideProps(config: Config) {
+export async function getStaticProps(config: Config) {
   // Fetch data from external API
   // const res = await fetch(`https://.../data`);
   // const data = await myData;
