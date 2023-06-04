@@ -1,5 +1,6 @@
 import { HeaderLinkProps } from "../../data/navData";
 import Navigation from "./Navigation";
+import { Topbar } from "./Topbar/Topbar";
 interface Props {
   isVisible?: boolean;
   data: HeaderLinkProps[];
@@ -8,7 +9,10 @@ interface Props {
 export const Header = ({ data }: Props) => {
   return (
     <header className="sticky top-0 w-full z-10 bg-white">
-      <Navigation data={data} />
+      <nav className="container mx-auto">
+        <Topbar />
+        <Navigation data={data} />
+      </nav>
     </header>
   );
 };

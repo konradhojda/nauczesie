@@ -11,6 +11,7 @@ export default function App({
   pageProps: { session, ...pageProps },
   router,
 }: AppProps) {
+  console.log(pageProps)
   return (
     <Fragment>
       <Head>

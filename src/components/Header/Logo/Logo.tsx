@@ -1,13 +1,15 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Image
-      src="./dog-silhouette-logo.png"
-      alt="kitten"
-      className="max-h-[60px]"
-      width={60}
-      height={60}
-    />
+    <Link href="/">
+      <img
+        src="./logo.png"
+        alt="kitten"
+        className="h-[60px] w-auto"
+        width={60}
+        height={60}
+      />
+    </Link>
   );
 }
