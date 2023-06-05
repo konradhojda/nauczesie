@@ -1,3 +1,3 @@
 export function Topbar() {
-  return <div>Topbar</div>;
+  return <div>{/*<FacebookIcon className="w-5 h-5 inline-block" />*/}</div>;
 }

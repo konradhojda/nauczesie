@@ -1,4 +1,3 @@
-import { useSession } from "next-auth/react";
 import { Router } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 import { Fragment, PropsWithChildren, useMemo } from "react";

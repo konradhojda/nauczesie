@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { cx } from "../../../common/cx";
 import { HeaderLinkProps } from "../../../data/navData";
+import MyIcon from "../../Icon/Icon";
 import Logo from "../Logo/Logo";
 
 interface Props {
@@ -7,14 +10,29 @@ interface Props {
 }
 
 export default function Navigation({ data }: Props) {
+  const router = useRouter();
+
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center h-[90px]">
       <Logo />
-      <ul className="flex gap-3">
+      <ul className="flex h-full items-center">
         {data.map((item, index) => {
           return (
-            <li key={item.name}>
-              <Link href={item.href} className="text-black">
+            <li
+              key={item.name}
+              className={cx(
+                "h-full flex items-center p-4 flex-col justify-center gap-2",
+                item.href === router.asPath && "active bg-green-500"
+              )}
+            >
+              <MyIcon name={item.icon || "home"} />
+              <Link
+                href={item.href}
+                className={cx(
+                  "text-black inline-block text-md",
+                  item.href === router.asPath && "text-white"
+                )}
+              >
                 {item.name}
               </Link>
             </li>

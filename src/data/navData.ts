@@ -1,3 +1,5 @@
+import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+
 export enum userRole {
   USER = "user",
   LOGGED_USER = "logged_user",
@@ -16,10 +18,11 @@ export interface HeaderLinkProps {
   name: string;
   href: string;
   requiredRank?: userRole;
+  icon?: FontAwesomeIconProps["icon"];
 }
 
 export const clientRoutingData: HeaderLinkProps[] = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/", icon: "home" },
   { name: "About", href: "/about" },
   { name: "Categories", href: "/categories" },
   { name: "Orders", href: "/orders" },

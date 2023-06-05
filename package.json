@@ -11,8 +11,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@next-auth/mongodb-adapter": "^1.1.2",
     "@next/font": "^13.1.6",
+    "@types/react-fontawesome": "^1.6.5",
     "antd": "^5.5.1",
     "clsx": "^1.2.1",
     "eslint": "^8.33.0",

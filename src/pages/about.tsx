@@ -1,10 +1,6 @@
 import Slider from "../components/Slider";
 
-interface Config {
-  template: "LIGHT" | "DARK";
-}
-
-export default function Home({ template }: Config) {
+export default function Home() {
   return (
     <div className="flex flex-col gap-6">
       <Slider />
@@ -59,20 +55,3 @@ export default function Home({ template }: Config) {
     </div>
   );
 }
-
-export async function getStaticProps(config: Config) {
-  // Fetch data from external API
-  // const res = await fetch(`https://.../data`);
-  // const data = await myData;
-
-  // Pass data to the page via props
-  return {
-    props: {
-      myData,
-    },
-  };
-}
-
-const myData = {
-  template: "LIGHT",
-};
