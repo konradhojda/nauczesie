@@ -4924,6 +4924,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+svg-icon-sprite@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svg-icon-sprite/-/svg-icon-sprite-1.1.1.tgz#e6671d7b354d1c9ace5bc442e0072904c32f19e3"
+  integrity sha512-hxGQ5Z/QfNAs7FWuYbulLngmlwWmf64P8J/l859pCkbAtCMu8s5hoh23DvTxM6wCCyL7ORSiqQm5UV7B+5Tu1A==
+
 swiper@^9.2.3:
   version "9.3.2"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-9.3.2.tgz#f29eddb17f231221c7727372637c44279174a4e1"

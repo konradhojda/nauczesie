@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "icon": "svg-icon-generate --folder=./src/icons --output=./sprite.svg",
     "test": "jest"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
+    "svg-icon-sprite": "^1.1.1",
     "swiper": "^9.2.3",
     "typescript": "^5.0.4"
   },

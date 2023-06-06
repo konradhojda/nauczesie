@@ -1,17 +1,16 @@
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
+import * as React from "react";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import type { IconType } from "./IconType";
+import { map } from "./map";
 
-library.add(fas);
+type IconProps = { name: IconType } & React.SVGProps<SVGSVGElement>;
 
-export default function MyIcon({
-  name,
-}: {
-  name: FontAwesomeIconProps["icon"];
-}) {
-  return <FontAwesomeIcon icon={name} />;
+export function Icon({ name: providedName, ...rest }: IconProps) {
+  const name = map[providedName] || providedName;
+  console.log(name);
+  return (
+    <svg width="1em" height="1em" {...rest}>
+      <use xlinkHref={`./icons.svg#${name}`} />
+    </svg>
+  );
 }

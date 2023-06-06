@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { cx } from "../../../common/cx";
 import { HeaderLinkProps } from "../../../data/navData";
-import MyIcon from "../../Icon/Icon";
+import { Icon } from "../../Icon/Icon";
 import Logo from "../Logo/Logo";
 
 interface Props {
@@ -25,7 +25,7 @@ export default function Navigation({ data }: Props) {
                 item.href === router.asPath && "active bg-green-500"
               )}
             >
-              <MyIcon name={item.icon || "home"} />
+              <Icon name={item.icon} />
               <Link
                 href={item.href}
                 className={cx(

@@ -22,7 +22,7 @@ export interface HeaderLinkProps {
 }
 
 export const clientRoutingData: HeaderLinkProps[] = [
-  { name: "Home", href: "/", icon: "home" },
+  { name: "Home", href: "/", icon: "facebook" },
   { name: "About", href: "/about" },
   { name: "Categories", href: "/categories" },
   { name: "Orders", href: "/orders" },
