@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "icon": "svg-icon-generate --folder=./src/icons --output=./sprite.svg",
+    "icon": "svg-icon-generate --folder=./src/icons --output=./public/icons.svg",
     "test": "jest"
   },
   "dependencies": {
